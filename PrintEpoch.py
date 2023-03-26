@@ -3,17 +3,26 @@ import time
 class Epoch():
     '''
     Class that finds, formats and print the beginning of Epoch on a given computer
+
+    METHODS:
+    ----------
+
+    epochBeginning()
+
+    printEpoch()
     '''
 	
-    def epochBeginning(self):
+    def epochBeginning(self) -> str:
         '''
         Method that finds the beginning of epoch on a computer.
 
         ARGUMENTS:
+        ----------
 
         Nothing
 
         RETURNS:
+        ----------
 
         epoch2 (str)
         '''
@@ -23,15 +32,17 @@ class Epoch():
         # print(type(epoch2)) # returns str
         return epoch2
 
-    def printEpoch(self):
+    def printEpoch(self) -> None:
         '''
         Method which prints beginning of epoch (found by Method epochBeginning())
 
         ARGUMENTS:
+        ----------
 
         Nothing
 
         RETURNS:
+        ----------
 
         Nothing (BUT prints the epoch beginning!)
         '''

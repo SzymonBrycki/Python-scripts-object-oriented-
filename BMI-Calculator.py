@@ -1,16 +1,25 @@
 class BMICalc():
     '''
     Class that implements a BMI Calculator.
+
+    METHODS:
+    ----------
+
+    calc()
+
+    printBMI()
     '''
-    def calc(self):
+    def calc(self) -> float:
         '''
         Method that ask for data and calculated the BMI.
 
         ARGUMENTS:
+        ----------
 
         Nothing
 
         RETURNS:
+        ----------
 
         Nothing (BUT prints the calculated BMI)
         '''
@@ -22,8 +31,25 @@ class BMICalc():
 
         BMI = mass / height**2
 
-        print("Your BMI is %.2f" % BMI)
+        return BMI
+    
+    def printBMI(self) -> None:
+        '''
+        Method that prints BMI.
+
+        ARGUMENTS:
+        ----------
+
+        Nothing
+
+        RETURNS:
+        ----------
+
+        Nothing (BUT prints the BMI)
+        '''
+        BMI = BMICalc.calc(self)
+        print(f"Your BMI is {BMI:.2f}")
 
 if __name__ == "__main__":
     oCalc = BMICalc()
-    oCalc.calc()
+    oCalc.printBMI()

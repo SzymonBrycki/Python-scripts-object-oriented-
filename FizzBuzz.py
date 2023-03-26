@@ -1,16 +1,23 @@
 class FizzBuzz():
     '''
     Class that implements the popular FizzBuzz programming problem.
+
+    METHODS:
+    ----------
+    
+    printFizzBuzz()
     '''
-    def printFizzBuzz(self):
+    def printFizzBuzz(self) -> None:
         '''
         Method that prints FizzBuzz.
 
         ARGUMENTS:
+        ----------
 
         Nothing
 
         RETURNS:
+        ----------
 
         Nothing (BUT prints the FizzBuzz)
         '''
