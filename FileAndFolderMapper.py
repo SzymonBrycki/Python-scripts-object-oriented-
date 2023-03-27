@@ -30,14 +30,15 @@ class Mapper():
 
     BaseFolder = None # LATER: input("Enter the PATH towards the base file: ")
 
-    FilesSUM = 0
-    DirectoriesSUM = 0
-
     main_list = list()
     main_string = None
 
     double_space = "  "
     new_line = "\n"
+
+    def __init__(self):
+        self.FilesSUM = 0
+        self.DirectoriesSUM = 0
 
     def findLastSlash(self, my_string):
         '''
@@ -223,17 +224,17 @@ class Mapper():
             # for name in files:
                 # printNicelyFiles(name)
             for directory in dirs:
-                Mapper().DirectoriesSUM = Mapper().DirectoriesSUM + 1
+                self.DirectoriesSUM = self.DirectoriesSUM + 1
             for file in files:
                 Mapper().addNicelyFiles(file)
-                Mapper().FilesSUM = Mapper().FilesSUM + 1
+                self.FilesSUM = self.FilesSUM + 1
 
         Mapper().printTheMainList()
                 
         print("")
-        print("Total number of files:", Mapper().FilesSUM)
-        print("Total number of directories:", Mapper().DirectoriesSUM)
-        print("Total items:", Mapper().FilesSUM + Mapper().DirectoriesSUM)
+        print("Total number of files:", self.FilesSUM)
+        print("Total number of directories:", self.DirectoriesSUM)
+        print("Total items:", self.FilesSUM + self.DirectoriesSUM)
         print("")
 
         while True:
