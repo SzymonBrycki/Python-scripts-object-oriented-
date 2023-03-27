@@ -1,7 +1,30 @@
 import python_avatars as pa 
 
 class GenAvatar():
-    def szymons(self):
+    '''
+    Class that generates avatars - either of the author or a random one.
+
+    METHODS:
+    ----------
+
+    szymons()
+
+    random()
+    '''
+    def szymons(self) -> None:
+        '''
+        Method that generates the avatar of the author.
+
+        ARGUMENTS:
+        ----------
+
+        Nothing
+
+        RETURNS:
+        ----------
+        
+        Nothing (BUT generates the avatar)
+        '''
         my_avatar = pa.Avatar(
             style = pa.AvatarStyle.CIRCLE,
             background_color = "#6FBF0D",
@@ -22,7 +45,20 @@ class GenAvatar():
 
         my_avatar.render("my_avatar.svg")
 
-    def random(self):
+    def random(self) -> None:
+        '''
+        Method that generates random avatar.
+
+        ARGUMENTS:
+        ----------
+
+        Nothing
+
+        RETURNS:
+        ---------
+
+        Nothing (BUT generates the avatar)
+        '''
         random_avatar = pa.Avatar.random()
         random_avatar.render("random_avatar.svg")
 
