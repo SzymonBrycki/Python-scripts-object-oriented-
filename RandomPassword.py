@@ -15,6 +15,12 @@ class RandomPassword:
     def random_lowercase(self):
         '''
         Returns a random lowercase character.
+
+        ARGS:
+        * None
+
+        RETURNS:
+        * random_lc - char
         '''
         random_lc = random.choice(self.lc)
         return random_lc
@@ -22,6 +28,12 @@ class RandomPassword:
     def random_uppercase(self):
         '''
         Returns a random uppercase character.
+
+        ARGS:
+        * None
+
+        RETURNS:
+        * random_uc - char
         '''
         random_uc = random.choice(self.uc)
         return random_uc
@@ -29,6 +41,12 @@ class RandomPassword:
     def random_nr(self):
         '''
         Return a random number ( 0-9 ).
+
+        ARGS:
+        * None
+
+        RETURNS:
+        * random_nr - char
         '''
         random_nr = random.choice(self.nr)
         return random_nr
@@ -36,15 +54,27 @@ class RandomPassword:
     def random_special(self):
         '''
         Returns a random special character.
+
+        ARGS:
+        * None
+
+        RETURNS:
+        * random_special - char
         '''
         random_special = random.choice(self.special)
         return random_special
 
     def generate_safe_password(self, size = 20):
         '''
-        Generates a safe, random password. 
+        Generates a safe, random password (as a list !!! ). 
         The atribute of the function, unless specified otherwise, 
         will generate 20-char long pass.
+
+        ARGS:
+        * Size - inf (default 20)
+
+        RETURNS:
+        * random list - list (of characters) 
         '''
 
         random_list = list()
@@ -71,6 +101,12 @@ class RandomPassword:
     def string_from_list(self, my_list):
         '''
         Turns a list (of random characters) into a string.
+
+        ARGS:
+        * my_list - list
+
+        RETURNS:
+        * my string - string
         '''
         my_string = "".join(my_list)
 
@@ -83,6 +119,12 @@ class RandomPassword:
         Will generate 20-char long pass. 
         If you need a longer or shorter password, 
         use final_result_of_given_size()
+
+        ARGS:
+        * None
+
+        RETURNS:
+        * b - string
         '''
         a = self.generate_safe_password()
         b = self.string_from_list(a)
@@ -92,6 +134,12 @@ class RandomPassword:
     def final_result_of_given_size(self, size):
         '''
         Generates safe password of given size.
+
+        ARGS:
+        * size - int
+
+        RETURNS:
+        * b - string 
         '''
 
         a = self.generate_safe_password(size)
