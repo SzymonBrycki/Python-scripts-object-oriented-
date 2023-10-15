@@ -82,11 +82,21 @@ class RandomPassword:
         
         Will generate 20-char long pass. 
         If you need a longer or shorter password, 
-        you need to manually operate within the appropriate functions of the class. 
+        use final_result_of_given_size()
         '''
         a = self.generate_safe_password()
         b = self.string_from_list(a)
         
+        return b
+    
+    def final_result_of_given_size(self, size):
+        '''
+        Generates safe password of given size.
+        '''
+
+        a = self.generate_safe_password(size)
+        b = self.string_from_list(a)
+
         return b
     
 ############################
@@ -98,3 +108,9 @@ if __name__ == "__main__":
     mypass = RandomPassword()
     a = mypass.final_result()
     print("Your new safe password is: ", a)
+
+    '''
+    mypass2 = RandomPassword()
+    a = mypass2.final_result_of_given_size(10)
+    print("You second password is: ", a)
+    '''
