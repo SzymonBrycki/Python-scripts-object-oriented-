@@ -2,6 +2,9 @@ import string
 import random
 
 class RandomPassword:
+    '''
+    A class that creates random password.
+    '''
 
     def __init__(self):
         self.lc = string.ascii_lowercase
@@ -10,22 +13,40 @@ class RandomPassword:
         self.special = string.punctuation
 
     def random_lowercase(self):
+        '''
+        Returns a random lowercase character.
+        '''
         random_lc = random.choice(self.lc)
         return random_lc
 
     def random_uppercase(self):
+        '''
+        Returns a random uppercase character.
+        '''
         random_uc = random.choice(self.uc)
         return random_uc
 
     def random_nr(self):
+        '''
+        Return a random number ( 0-9 ).
+        '''
         random_nr = random.choice(self.nr)
         return random_nr
 
     def random_special(self):
+        '''
+        Returns a random special character.
+        '''
         random_special = random.choice(self.special)
         return random_special
 
     def generate_safe_password(self, size = 20):
+        '''
+        Generates a safe, random password. 
+        The atribute of the function, unless specified otherwise, 
+        will generate 20-char long pass.
+        '''
+
         random_list = list()
 
         while size != 0:
@@ -48,11 +69,21 @@ class RandomPassword:
         return random_list
 
     def string_from_list(self, my_list):
+        '''
+        Turns a list (of random characters) into a string.
+        '''
         my_string = "".join(my_list)
 
         return my_string
 
     def final_result(self):
+        '''
+        Sets the final result of the computations, i.e. random password.
+        
+        Will generate 20-char long pass. 
+        If you need a longer or shorter password, 
+        you need to manually operate within the appropriate functions of the class. 
+        '''
         a = self.generate_safe_password()
         b = self.string_from_list(a)
         
