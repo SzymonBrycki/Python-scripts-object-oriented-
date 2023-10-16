@@ -1,6 +1,8 @@
 import string
 import random
 
+newline = "\n"
+
 class RandomPassword:
     '''
     A class that creates random password.
@@ -71,7 +73,7 @@ class RandomPassword:
         will generate 20-char long pass.
 
         ARGS:
-        * Size - inf (default 20)
+        * Size - int (default: 20)
 
         RETURNS:
         * random list - list (of characters) 
@@ -146,6 +148,30 @@ class RandomPassword:
         b = self.string_from_list(a)
 
         return b
+
+    def generate_n_passwords(self, n, size = 20):
+        '''
+        Generates n passwords of size size (by default 20)
+
+        ARGS:
+        * n - int
+        * size - int (default: 20)
+
+        RETURNS:
+        b - string (prints nicely!)
+        '''
+
+        counter = 0
+        b = ""
+
+        while n !=0:
+            counter = counter + 1
+            a = self.final_result_of_given_size(size)
+            b = b + " " + str(counter) + " : " + a + newline
+            n = n - 1
+
+        return b
+
     
 ############################
 # PROGRAM
@@ -158,7 +184,17 @@ if __name__ == "__main__":
     print("Your new safe password is: ", a)
 
     '''
+    # DELETE COMMENTS TO GEN 1 pass of size 10
+
     mypass2 = RandomPassword()
     a = mypass2.final_result_of_given_size(10)
     print("You second password is: ", a)
+    '''
+
+    '''
+    # DELETE COMMENTS TO GEN 10 passwords of size 5
+
+    mypass3 = RandomPassword()
+    a = mypass3.generate_n_passwords(10, 5)
+    print(a)
     '''
