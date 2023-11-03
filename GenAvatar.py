@@ -3,13 +3,6 @@ import python_avatars as pa
 class GenAvatar():
     '''
     Class that generates avatars - either of the author or a random one.
-
-    METHODS:
-    ----------
-
-    szymons()
-
-    random()
     '''
     def szymons(self) -> None:
         '''

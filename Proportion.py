@@ -1,21 +1,6 @@
 class Proportion():
     '''
     Class that calculates mathematical proportions.
-
-    METHODS:
-    ----------
-
-    calcA()
-
-    calcB()
-
-    calcC()
-
-    calcD()
-
-    wrongLetter()
-
-    run()
     '''
     def calcA(self) -> None:
         '''

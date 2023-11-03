@@ -1,17 +1,10 @@
 class BMICalc():
     '''
     Class that implements a BMI Calculator.
-
-    METHODS:
-    ----------
-
-    calc()
-
-    printBMI()
     '''
     def calc(self) -> float:
         '''
-        Method that ask for data and calculated the BMI.
+        Method that ask for data and calculates the BMI.
 
         ARGUMENTS:
         ----------

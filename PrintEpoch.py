@@ -3,13 +3,6 @@ import time
 class Epoch():
     '''
     Class that finds, formats and print the beginning of Epoch on a given computer
-
-    METHODS:
-    ----------
-
-    epochBeginning()
-
-    printEpoch()
     '''
 	
     def epochBeginning(self) -> str:

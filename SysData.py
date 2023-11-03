@@ -3,11 +3,6 @@ import platform
 class SysData():
     '''
     Class that prints computer system data.
-
-    METHODS:
-    ----------
-
-    printData()
     '''
 
     def printData(self) -> None:

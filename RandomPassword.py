@@ -18,11 +18,15 @@ class RandomPassword:
         '''
         Returns a random lowercase character.
 
-        ARGS:
-        * None
+        ARGUMENTS:
+        ----------
+        
+        None
 
         RETURNS:
-        * random_lc - char
+        ----------
+
+        random_lc (char)
         '''
         random_lc = random.choice(self.lc)
         return random_lc
@@ -31,11 +35,15 @@ class RandomPassword:
         '''
         Returns a random uppercase character.
 
-        ARGS:
-        * None
+        ARGUMENTS:
+        ----------
+
+        None
 
         RETURNS:
-        * random_uc - char
+        ----------
+        
+        random_uc (char)
         '''
         random_uc = random.choice(self.uc)
         return random_uc
@@ -44,11 +52,15 @@ class RandomPassword:
         '''
         Return a random number ( 0-9 ).
 
-        ARGS:
-        * None
+        ARGUMENTS:
+        ----------
+
+        None
 
         RETURNS:
-        * random_nr - char
+        ----------
+        
+        random_nr (char)
         '''
         random_nr = random.choice(self.nr)
         return random_nr
@@ -57,11 +69,15 @@ class RandomPassword:
         '''
         Returns a random special character.
 
-        ARGS:
-        * None
+        ARGUMENTS:
+        ----------
+        
+        None
 
         RETURNS:
-        * random_special - char
+        ----------
+        
+        random_special (char)
         '''
         random_special = random.choice(self.special)
         return random_special
@@ -72,11 +88,15 @@ class RandomPassword:
         The atribute of the function, unless specified otherwise, 
         will generate 20-char long pass.
 
-        ARGS:
-        * Size - int (default: 20)
+        ARGUMENTS:
+        ----------
+        
+        size - (int, default = 20)
 
         RETURNS:
-        * random list - list (of characters) 
+        ----------
+        
+        random list - list (of characters) 
         '''
 
         random_list = list()
@@ -104,11 +124,15 @@ class RandomPassword:
         '''
         Turns a list (of random characters) into a string.
 
-        ARGS:
-        * my_list - list
+        ARGUMENTS:
+        ----------
+        
+        my_list (list)
 
         RETURNS:
-        * my string - string
+        ----------
+
+        my string (string)
         '''
         my_string = "".join(my_list)
 
@@ -122,11 +146,15 @@ class RandomPassword:
         If you need a longer or shorter password, 
         use final_result_of_given_size()
 
-        ARGS:
-        * None
+        ARGUMENTS:
+        ----------
+
+        None
 
         RETURNS:
-        * b - string
+        ----------
+
+        b (string)
         '''
         a = self.generate_safe_password()
         b = self.string_from_list(a)
@@ -137,11 +165,15 @@ class RandomPassword:
         '''
         Generates safe password of given size.
 
-        ARGS:
-        * size - int
+        ARGUMENTS:
+        ----------
+
+        size (int)
 
         RETURNS:
-        * b - string 
+        ----------
+
+        b (string) 
         '''
 
         a = self.generate_safe_password(size)
@@ -153,12 +185,16 @@ class RandomPassword:
         '''
         Generates n passwords of size size (by default 20)
 
-        ARGS:
-        * n - int
-        * size - int (default: 20)
+        ARGUMENTS:
+        ----------
+
+        n (int)
+        size  (int, default = 20)
 
         RETURNS:
-        b - string (prints nicely!)
+        ----------
+
+        b (string) <prints nicely!>
         '''
 
         counter = 0
