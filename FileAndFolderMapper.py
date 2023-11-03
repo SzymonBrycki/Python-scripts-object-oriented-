@@ -3,29 +3,6 @@ import os
 class Mapper():
     '''
     Class that prints map of subfolders and files in a givne folder.
-
-    METHODS:
-    ----------
-
-    findLastSlash(my_string)
-
-    countSlashes(base)
-
-    determineFinalSlashes(base)
-
-    sliceToLastElement(base)
-
-    addNicelyFolders(base)
-
-    printTheMainList()
-
-    findingSlash(my_list)
-
-    spacesPrevious(my_list)
-
-    finalStringOfFiles(file)
-
-    addNicelyFiles(file)
     '''
 
     BaseFolder = None # LATER: input("Enter the PATH towards the base file: ")
@@ -44,9 +21,15 @@ class Mapper():
         '''
         Finds last slash in a given string. 
         
-        Arguments: my_string (str).
+        ARGUMENTS:
+        ----------
         
-        Returns: x <which is minus number being the index of lash found slash> (int)
+        my_string (str).
+        
+        RETURNS:
+        ----------
+        
+         x <which is minus number being the index of lash found slash> (int)
         '''
         
         slash = "\\"
@@ -63,9 +46,15 @@ class Mapper():
         '''
         Counts all slashes in a given argument.
         
-        Arguments: base (str).
+        ARGUMENTS:
+        ----------
         
-        Returns: numberOfSlashes (int)
+        base (str).
+        
+        RETURNS:
+        ----------
+        
+        numberOfSlashes (int)
         '''
         
         numberOfSlashes = base.count("\\")
@@ -75,9 +64,15 @@ class Mapper():
         '''
         Function that determines how many double spaces should be entered.
 
-        Argument: base (str)
+        ARGUMENTS:
+        ----------
+        
+        base (str)
 
-        Returns: slashes_final (int)
+        RETURNS:
+        ----------
+        
+        slashes_final (int)
         '''
         slashes = Mapper().countSlashes(base) # number of slashes in current folder
         slashes_minus = Mapper().countSlashes(BaseFolder) # number of slashes in the Base Folder 
@@ -89,9 +84,15 @@ class Mapper():
         '''
         A function which strips the string of all adress of a file/folder into it's last element (the file/folder itself).
 
-        Arguments: base (str) [the adress of a file/folder]
+        ARGUMENTS:
+        ----------
+        
+        base (str) [the adress of a file/folder]
 
-        Returns: my_new_string
+        RETURNS:
+        ----------
+        
+        my_new_string
         '''
         beginning_of_string = Mapper().findLastSlash(base) # the number of last slash in given folder, counted from the back
 
@@ -103,9 +104,15 @@ class Mapper():
         '''
         A function which add folders in this program to main_list in a nice fashion. 
         
-        Arguments: base (str)
+        ARGUMENTS:
+        ----------
         
-        Returns: appends main_string with my_new_string_2
+        base (str)
+        
+        RETURNS:
+        ----------
+        
+        appends main_string with my_new_string_2
         '''
         
         # global new_line
@@ -127,6 +134,16 @@ class Mapper():
     def printTheMainList(self):
         '''
         Function that prints the main_list, so we can see what's in there.
+
+        ARGUMENTS:
+        ----------
+
+        None
+
+        RETURNS:
+
+        None (but prints the main string)
+        ----------
         '''
         global main_string
 
@@ -138,9 +155,15 @@ class Mapper():
         '''
         Function that checks if there is a slash in a given list
 
-        Arguments: my_list (list[nr])
+        ARGUMENTS:
+        ----------
+        
+        my_list (list[nr])
 
-        Returns: False if no slash or position of slash (if contains one)
+        RETURNS:
+        ----------
+        
+        False if no slash or position of slash (if contains one)
         '''
 
         # searched_thing = my_list.join()
@@ -158,9 +181,15 @@ class Mapper():
         '''
         Function that finds number of spaces in the previous list member.
 
-        Argument: my_list (list)
+        ARGUMENTS:
+        ----------
+        
+        my_list (list)
 
-        Returns: The number of spaces (being formatted - it should work no matter id double_space is 1, 2 or 4 spaces)
+        RETURNS:
+        ----------
+        
+        number_of_formated_spaces (int) (being formatted - it should work no matter id double_space is 1, 2 or 4 spaces)
         '''
         previous_list = my_list[-1]
         searched_thing = " ".join(map(str, previous_list))
@@ -182,9 +211,15 @@ class Mapper():
         '''
         A function to determine the final string that a file adress should have been.
 
-        Argument: file (str)
+        ARGUMENTS:
+        ----------
+        
+        file (str)
 
-        Returns: string_with_file (str)
+        RETURNS:
+        ----------
+        
+        string_with_file (str)
         '''
         previous_entry = Mapper().main_list[-1]
 
@@ -200,15 +235,34 @@ class Mapper():
         '''
         A function that add files to main_list in a nice fashion.
 
-        Argument: file (str)
+        ARGUMENTS:
+        ----------
+        
+        file (str)
 
-        Returns: appends main_list (with my_string)
+        RETURNS:
+        ----------
+        
+        appends main_list (with my_string)
         '''
         my_string = Mapper().finalStringOfFiles(file) + Mapper().new_line
 
         Mapper().main_list.append(my_string)
 
     def run(self):
+        '''
+        Runs the program.
+
+        ARGUMENTS:
+        ----------
+
+        None
+
+        RETURNS:
+        ----------
+
+        None (but runs the program)
+        '''
         
         print("")
         print("Printing folders nicely!")
